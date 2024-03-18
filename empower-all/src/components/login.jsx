@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "./navbar";
+import { Link } from "react-router-dom";
 import "./login.css";
 import "bootstrap";
 import loginImg from "../assets/loginImg.png";
@@ -68,13 +69,33 @@ const Login = () => {
         <button type='button' className="loginbutton">
           Login 
         </button>
+        
         </div>
         <div className="signUpLogin">
           <h1>New Here?</h1>
           <p>
           Sign Up and discover a great amount of new opportunties
           </p>
-          <button type="button" className="signUpLoginButton">Sign Up</button>
+          {/* <button type="button" className="signUpLoginButton">Sign Up</button> */}
+          <Link to="/signup"
+                    style={{
+                      marginTop: "40px",
+                      backgroundColor: "#FFECD1",
+                      border: "none",
+                      borderRadius: "10.1px",
+                      height: "60px",
+                      width: "200px",
+                      color: "#083D32",
+                      fontSize: "15px",
+                      fontWeight: "500",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      textDecoration: "none",
+                    }}
+                  >
+                    Sign Up
+                  </Link>
         </div>
       </div>
       <Footer />
