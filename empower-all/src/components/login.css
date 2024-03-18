@@ -2,7 +2,7 @@ body {
   font: "Space Grotesk", sans-serif;
   background-color: #fff6e9;
 }
-.login-container {
+/* .login-container {
   position: relative;
 }
 .login-div {
@@ -91,4 +91,49 @@ body {
 
 .signupLogin:hover{
   text-decoration: underline;
+} */
+
+.mainLoginContainer{
+  width: 800px;
+  height: 460px;
+  background-color: #083D32;
+  position: relative;
+  top: 100px;
+  left: 16%;
+  margin-bottom: 273px;
+  padding: 5px 0 0 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 7.28px;
+}
+
+.loginDiv{
+  background-color: #FFECD1;
+  padding-top: 20px;
+  padding-left: 20px;
+  width: 500px;
+  border-radius: 7.28px;
+  color: #083D32;
+}
+
+.loginDiv p{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.social-icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons .google{
+  margin-right: 25px;
+}
+.or{
+  width: 100%;
+  margin-left: -5px;
 }

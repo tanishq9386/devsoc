@@ -161,9 +161,28 @@ body{
   font-size: 13px;
 } */
 
-
+/* .animation-background{
+  margin-top: auto;
+  position: absolute;
+  top: 98%;
+  width: 100%;
+  height: 15px;
+  background-color: #085444;
+} */
 .footerBanner {
   margin-top: auto;
+  animation: updown 3s linear infinite;
+}
+@keyframes updown {
+  0% {
+      transform: translateY(15px);
+  }
+  50% {
+      transform: translateY(5px);
+  }
+  100% {
+      transform: translateY(15px);
+  }
 }
 @media (max-width: 768px) {
   .banner-text {

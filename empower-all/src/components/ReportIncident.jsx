@@ -1,57 +1,49 @@
-import React from 'react'
-import Navbar from "./navbar"
-import "./report.css"
-import Footer from "./Footer"
+import React from 'react';
+import Navbar from './navbar';
+import './report.css';
+import Footer from './Footer';
 
 const ReportIncident = () => {
   return (
     <div className='reportIncident'>
-      <Navbar/>
+      <Navbar />
       <h1 className='reportHeading'>Report Incident</h1>
       <div className='reportInputs'>
         <span>Register</span>
         <br/><br/>
-        <label className='fieldLabel'>
-            Choose Category
-        </label>
+        <label className='fieldLabel'>Choose Category</label>
         <br/>
-        <input type="text" className='inputField'/>
+        <select className='inputField'>
+          <option value='Category1'>Category 1</option>
+          <option value='Category2'>Category 2</option>
+          <option value='Category3'>Category 3</option>
+        </select>
         <br/>
-        <label className='fieldLabel'>
-            Location
-        </label>
+        <label className='fieldLabel'>Location</label>
         <br/>
-        <input type="text" className='inputField'/>
+        <input type='text' className='inputField'/>
         <br/>
-        <label className='fieldLabel'>
-            City
-        </label>
+        <label className='fieldLabel'>City</label>
         <br/>
-        <input type="text" className='inputField'/>
+        <input type='text' className='inputField'/>
         <br/>
-        <label className='fieldLabel'>
-            Pincode
-        </label>
+        <label className='fieldLabel'>Pincode</label>
         <br/>
-        <input type="text" className='inputField'/>
+        <input type='text' className='inputField'/>
         <br/>
-        <label className='fieldLabel' >
-            Describe the Problem
-        </label>
+        <label className='fieldLabel'>Describe the Problem</label>
         <br/>
-        <input type="text" className='inputField' id="des"/>
+        <input type='text' className='inputField' id='des'/>
         <br/>
-        <label className='fieldLabel'>
-            Upload Photos
-        </label>
+        <label className='fieldLabel'>Upload Photos</label>
         <br/>
-        <input type="text" className='inputField' id="upload"/>
+        <input type='text' className='inputField' id='upload'/>
         <br/>
-        <button type="button" className='reportSubmit'>Submit</button>
+        <button type='button' className='reportSubmit'>Submit</button>
       </div>
-      <Footer/>
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default ReportIncident
+export default ReportIncident;

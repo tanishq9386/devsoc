@@ -53,6 +53,7 @@ const Banner = () => {
           </Container>
         </div>
         <img src={footer} className="footerBanner" />
+        {/* <div className="animation-background"></div> */}
       </div>
     </div>
   );

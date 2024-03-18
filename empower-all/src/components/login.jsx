@@ -4,6 +4,9 @@ import "./login.css";
 import "bootstrap";
 import loginImg from "../assets/loginImg.png";
 import Footer from "./Footer";
+import google from "../assets/google.png";
+import facebook from "../assets/facebook.png";
+import or from "../assets/or.png"
 
 const Login = () => {
 
@@ -35,7 +38,7 @@ const Login = () => {
   return (
     <div className="login-container">
       <Navbar />
-      <div className="login-div">
+      {/* <div className="login-div">
         <h1>Log In</h1>
         <p>
           Don't have an account?{" "}
@@ -72,7 +75,18 @@ const Login = () => {
           onClick={handleSubmit}
         />
       </div>
-      <img src={loginImg} className="loginImg" />
+      <img src={loginImg} className="loginImg" /> */}
+      <div className="mainLoginContainer">
+        <div className="loginDiv">
+          <h1>Login</h1>
+          <p>Log In using social networks<br/>
+          </p>
+          <div className="social-icons">
+          <a target="_blank" href="https://www.google.com"><img src={google} className="google"/></a><a target="_blank" href="https://www.facebook.com"><img src={facebook}/></a>
+          </div>
+          <img src={or} className="or"/>
+        </div>
+      </div>
       <Footer />
     </div>
   );
