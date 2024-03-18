@@ -1,0 +1,44 @@
+/* Ngo.css */
+
+body {
+    font-family: Arial, sans-serif;
+  
+    padding: 0;
+    background-color:#FFF6E9;
+  }
+  
+  .container {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: -5px;
+  }
+  
+  .box {
+    background-color:#FFECD1;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 70px;
+    margin-bottom: 20px;
+    margin-left: 60px;
+    
+    padding: 20px;
+    box-sizing: border-box;
+    width: 280px;
+    height: 280px;
+    text-align: center;
+    border: 5px solid #083D32;
+    
+    color: #333;
+  }
+  
+  .box h2{
+    color: #083D32;
+
+  }
+  .box p{
+    color: #757575;
+    text-align: left;
+    font-size: smaller;
+  }
+  
