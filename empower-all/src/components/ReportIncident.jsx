@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './navbar';
 import './report.css';
 import Footer from './Footer';
+import holder from '../assets/Group 37.png';
 
 const ReportIncident = () => {
   return (
@@ -37,7 +38,7 @@ const ReportIncident = () => {
         <br/>
         <label className='fieldLabel'>Upload Photos</label>
         <br/>
-        <input type='text' className='inputField' id='upload'/>
+        <input type='text' className='inputField' id='upload' placeholder={<img src={holder}/>}/>
         <br/>
         <button type='button' className='reportSubmit'>Submit</button>
       </div>
