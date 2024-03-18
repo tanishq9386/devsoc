@@ -7,8 +7,8 @@ import "./signup.css";
 import google from "../assets/google.png";
 import facebook from "../assets/facebook.png";
 import or from "../assets/or.png"
-import show from "../assets/show.svg";
-import hide from "../assets/hide.svg";
+import show from "../assets/show.png";
+import hide from "../assets/hide.png";
 
 const Signup = () => {
   const [username, setUsername] = useState('');

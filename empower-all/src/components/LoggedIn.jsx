@@ -34,7 +34,7 @@ const LoggedIn = () => {
                 </div>
               </Col>
               <Col xs={12} md={6} xl={5}>
-                <img src={bannerImg} className="bannerImg" />
+                <img src={bannerImg} className="bannerImg2" />
               </Col>
             </Row>
           </Container>

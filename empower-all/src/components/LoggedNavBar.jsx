@@ -42,7 +42,7 @@ const NavbarComponent = () => {
               Contact Us
               </div>
               </Nav.Link>
-            <Nav.Link href="login">
+            <Nav.Link href="home">
               <div className="logoutButton">
               Log Out
               </div>
