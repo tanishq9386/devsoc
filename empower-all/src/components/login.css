@@ -159,7 +159,10 @@ body {
   border-radius: 7.2px;
   border: 1px solid black;
 }
-
+.nakli2{
+  text-decoration: none;
+  color:#fff;
+}
 .password-toggle{
   width: 20px;
 }

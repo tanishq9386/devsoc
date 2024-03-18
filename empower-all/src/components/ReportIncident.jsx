@@ -38,7 +38,7 @@ const ReportIncident = () => {
         <br/>
         <label className='fieldLabel'>Upload Photos</label>
         <br/>
-        <input type='text' className='inputField' id='upload' placeholder={<img src={holder}/>}/>
+        <img src={holder} alt='Uploaded' className='inputField' id='upload' />
         <br/>
         <button type='button' className='reportSubmit'>Submit</button>
       </div>
@@ -47,4 +47,4 @@ const ReportIncident = () => {
   );
 };
 
-export default ReportIncident;
+export default ReportIncident;

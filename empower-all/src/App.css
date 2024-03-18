@@ -19,9 +19,16 @@ body{
   border-radius: 5.26px;
   text-align: center;
 }
-.helpButton{
+.blogButton{
   padding-top: 1px;
-  width: 90px;
+  width: 70px;
+  height: 30px;
+  border-radius: 5.26px;
+  text-align: center;
+}
+.ngoButton{
+  padding-top: 1px;
+  width: 70px;
   height: 30px;
   border-radius: 5.26px;
   text-align: center;
@@ -67,7 +74,16 @@ body{
   margin-right: -50px;
 }
 
-
+.ngoButton:hover,.ngoButton::after{
+  background-color: #085444;
+  padding-top: 1px;
+  border-radius: 5.26px;
+}
+.blogButton:hover,.blogButton::after{
+  background-color: #085444;
+  padding-top: 1px;
+  border-radius: 5.26px;
+}
 .loginButton:hover,.loginButton::after{
   background-color: #085444;
   padding-top: 1px;

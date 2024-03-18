@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import Login from "./components/login";
 import Signup from "./components/signup";
 import Report from "./components/ReportIncident";
+import Blogs from './components/Blogs';
+import UserApp from './components/LoggedIn'
 
 import {
   createBrowserRouter,
@@ -31,6 +33,14 @@ const router = createBrowserRouter([
   {
     path: "report",
     element: <Report/>,
+  },
+  {
+    path: "blogs",
+    element: <Blogs/>,
+  },
+  {
+    path: "userhome",
+    element: <UserApp/>,
   },
 ]);
 

@@ -65,48 +65,6 @@ const Signup = () => {
   return (
     <div>
       <Navbar/>
-      {/* <div className="signup-div">
-        <h1>Sign Up</h1>
-        <p>Already have an account? <a href="login" className="signupLogin">Log In</a></p>
-        <div className="input-label">Username</div>
-        <input 
-          type="text" 
-          className="username" 
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          onBlur={validateForm}
-        />
-        {errors.username && <span className="error">{errors.username}</span>}
-        <div className="input-label">Email</div>
-        <input 
-          type="text" 
-          className="username" 
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          onBlur={validateForm}
-        />
-        {errors.email && <span className="error">{errors.email}</span>}
-        <div className="input-label">Password</div>
-        <input 
-          type="password" 
-          className="password" 
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          onBlur={validateForm}
-        />
-        {errors.password && <span className="error">{errors.password}</span>}
-        <div className="input-label">Confirm Password</div>
-        <input 
-          type="password" 
-          className="password" 
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          onBlur={validateForm}
-        />
-        {errors.confirmPassword && <span className="error">{errors.confirmPassword}</span>}
-        <input type="button" value="Register" className="loginB" onClick={handleSubmit} />
-      </div>
-      <img src={loginImg} className="loginImg" alt="Signup" /> */}
       <div className='mainSignUpContainer'>
         <div className='signupDiv'>
           <h1>Sign Up</h1>
@@ -116,7 +74,7 @@ const Signup = () => {
           <a target="_blank" href="https://www.google.com"><img src={google} className="google"/></a><a target="_blank" href="https://www.facebook.com"><img src={facebook}/></a>
           </div>
           <img src={or} className="or"/>
-          <div className="input-label">Username</div>
+          <div className="input-label">Name</div>
         <input 
           type="text" 
           className="username" 

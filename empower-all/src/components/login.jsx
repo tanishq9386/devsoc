@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./navbar";
 import { Link } from "react-router-dom";
+import { withRouter } from 'react-router-dom';
 import "./login.css";
 import "bootstrap";
 import loginImg from "../assets/loginImg.png";
@@ -37,7 +38,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      console.log("Form submitted");
+      // this.props.history.push('/userhome');
     }
   };
 
@@ -62,7 +63,7 @@ const Login = () => {
             </a>
           </div>
           <img src={or} className="or" />
-          <div className="input-label">Username</div>
+          <div className="input-label">Email</div>
           <input
             type="text"
             className="username"
@@ -84,7 +85,9 @@ const Login = () => {
           </div>
           {errors.password && <span className="error" id="error">{errors.password}</span>}
           <button type="button" className={setErrorOccured ? "loginbuttonrevised" : "loginbutton"} onClick={handleSubmit}>
+            <a href="/userhome" className="nakli2">
             Login
+            </a>
           </button>
         </div>
         <div className="signUpLogin">

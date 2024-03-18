@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import navImg from '../assets/Group 21.png';
-import "./navCss.css";
+import "./LoggedNavBar.css";
 
 const NavbarComponent = () => {
   return (
@@ -43,8 +43,8 @@ const NavbarComponent = () => {
               </div>
               </Nav.Link>
             <Nav.Link href="login">
-              <div className="loginButton">
-              Log In
+              <div className="logoutButton">
+              Log Out
               </div>
               </Nav.Link>
           </Nav>
