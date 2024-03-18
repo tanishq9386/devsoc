@@ -150,7 +150,7 @@ body{
   font-size: 13px;
 }
 
-.bannerLogin{
+/* .bannerLogin{
   margin-left: 10px;
   background-color: #083D32;
   border: none;
@@ -159,12 +159,23 @@ body{
   width: 120px;
   color: white;
   font-size: 13px;
-}
+} */
 
-.footer {
+
+.footerBanner {
   margin-top: auto;
 }
+@media (max-width: 768px) {
+  .banner-text {
+    width: auto;
+    margin: 50px auto;
+  }
 
+  .bannerImg {
+    width: 80%;
+    margin: 50px auto;
+  }
+}
 
 
 

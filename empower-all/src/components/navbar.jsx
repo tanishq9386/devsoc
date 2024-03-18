@@ -3,27 +3,15 @@ import "bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import navImg from './Group 21.png';
+import navImg from '../assets/Group 21.png';
 import "./navCss.css";
 
 const NavbarComponent = () => {
-  const [scrolled,setScrolled]=useState(false);
-  useEffect(()=>{
-    const onScroll=()=>{
-      if(window.scrollY>520){
-          setScrolled(true);
-      }else{
-          setScrolled(false);
-      }
-  }
-  window.addEventListener("scroll",onScroll);
-  return ()=> window.removeEventListener("scroll",onScroll);
-  },[])
   return (
     <>
       <Navbar bg="dark" data-bs-theme="light" className="navBarDes" expand="md">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="home">
             <img src={navImg} alt="Hello" className="navImg"/>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -34,7 +22,7 @@ const NavbarComponent = () => {
                 Home
               </div>
             </Nav.Link>
-            <Nav.Link href="#report">
+            <Nav.Link href="report">
               <div className="reportButton">
               Report
               </div>

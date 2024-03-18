@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Login from "./login";
+import Login from "./components/login";
+import Signup from "./components/signup";
+import Report from "./components/ReportIncident";
 
 import {
   createBrowserRouter,
@@ -11,12 +13,24 @@ import {
 } from "react-router-dom";
 const router = createBrowserRouter([
   {
+    path: "",
+    element: <App/>,
+  },
+  {
     path: "home",
     element: <App/>,
   },
   {
     path: "login",
     element: <Login/>,
+  },
+  {
+    path: "signup",
+    element: <Signup/>,
+  },
+  {
+    path: "report",
+    element: <Report/>,
   },
 ]);
 
