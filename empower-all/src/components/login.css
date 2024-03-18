@@ -142,16 +142,32 @@ body {
 .username
 {
   width: 460px !important;
+  margin-bottom: 2px !important;
 }
 .password
 {
   width: 460px !important;
+  margin-bottom: 2px !important;
 }
 .loginbutton{
   position: relative;
   width: 460px;
   text-align: center;
   margin-top: 50px;
+  height: 50px;
+  border-radius: 10.1px;
+  border: none;
+  background-color: #083D32;
+  color: white;
+}
+.toggle-password{
+   margin-bottom: 0px;
+}
+.loginbuttonrevised{
+  position: relative;
+  width: 460px;
+  text-align: center;
+  margin-top: 10px;
   height: 50px;
   border-radius: 10.1px;
   border: none;
@@ -173,9 +189,11 @@ body {
 }
 
 .error{
-  font-size: 15px;
-  margin-bottom: 0px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: red;
 }
+
 
 .signUpLoginButton{
   height: 60px;

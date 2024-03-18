@@ -3,6 +3,9 @@ import Navbar from "./navbar";
 import Footer from './Footer';
 import loginImg from "../assets/loginImg.png";
 import "./signup.css";
+import google from "../assets/google.png";
+import facebook from "../assets/facebook.png";
+import or from "../assets/or.png"
 
 const Signup = () => {
   const [username, setUsername] = useState('');
@@ -48,7 +51,7 @@ const Signup = () => {
   return (
     <div>
       <Navbar/>
-      <div className="signup-div">
+      {/* <div className="signup-div">
         <h1>Sign Up</h1>
         <p>Already have an account? <a href="login" className="signupLogin">Log In</a></p>
         <div className="input-label">Username</div>
@@ -89,7 +92,63 @@ const Signup = () => {
         {errors.confirmPassword && <span className="error">{errors.confirmPassword}</span>}
         <input type="button" value="Register" className="loginB" onClick={handleSubmit} />
       </div>
-      <img src={loginImg} className="loginImg" alt="Signup" />
+      <img src={loginImg} className="loginImg" alt="Signup" /> */}
+      <div className='mainSignUpContainer'>
+        <div className='signupDiv'>
+          <h1>Sign Up</h1>
+          <p>Sign Up using social networks<br/>
+          </p>
+          <div className="social-icons">
+          <a target="_blank" href="https://www.google.com"><img src={google} className="google"/></a><a target="_blank" href="https://www.facebook.com"><img src={facebook}/></a>
+          </div>
+          <img src={or} className="or"/>
+          <div className="input-label">Username</div>
+        <input 
+          type="text" 
+          className="username" 
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          onBlur={validateForm}
+        />
+        {errors.username && <span className="error">{errors.username}</span>}
+        
+        
+        <div className="input-label">Email</div>
+        <input 
+          type="text" 
+          className="username" 
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          onBlur={validateForm}
+        />
+        {errors.email && <span className="error">{errors.email}</span>}
+        
+        <div className="input-label">Password</div>
+        <input 
+          type="password" 
+          className="password" 
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          onBlur={validateForm}
+        />
+        {errors.password && <span className="error">{errors.password}</span>}
+        <div className="input-label">Confirm Password</div>
+        <input 
+          type="password" 
+          className="password" 
+          value={confirmPassword}
+          onChange={(e) => setConfirmPassword(e.target.value)}
+          onBlur={validateForm}
+        />
+        {errors.confirmPassword && <span className="error">{errors.confirmPassword}</span>}
+        <button type='button' className="SignUpbutton">
+          Login 
+        </button>
+
+        </div>
+        
+
+      </div>
       <Footer/>
     </div>
   );

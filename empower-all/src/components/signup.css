@@ -2,7 +2,7 @@ body {
     font: "Space Grotesk", sans-serif;
     background-color: #fff6e9;
   }
-  .login-container {
+  /* .login-container {
     position: relative;
   }
   .signup-div {
@@ -92,4 +92,66 @@ body {
   
   .signupLogin:hover{
     text-decoration: underline;
+  } */
+  .mainSignUpContainer{
+    width: 800px;
+    height: 620px;
+    background-color: #083D32;
+    position: relative;
+    top: 100px;
+    left: 16%;
+    margin-bottom: 273px;
+    padding: 5px 0 0 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 7.28px;
   }
+  .signupDiv{
+    background-color: #FFECD1;
+    padding-top: 20px;
+    padding-left: 20px;
+    width: 500px;
+    height: 610px;
+    border-radius: 7.28px;
+    color: #083D32;
+  }
+  .signupDiv p{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+  }
+  .social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social-icons .google{
+    margin-right: 25px;
+  }
+  .or{
+    width: 100%;
+    margin-left: -5px;
+    margin-top: 15px
+  }
+  .username
+{
+  width: 460px !important;
+}
+.password
+{
+  width: 460px !important;
+}
+.SignUpbutton{
+  position: relative;
+  width: 460px;
+  text-align: center;
+  margin-top: 50px;
+  height: 50px;
+  border-radius: 10.1px;
+  border: none;
+  background-color: #083D32;
+  color: white;
+}
