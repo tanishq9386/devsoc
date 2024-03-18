@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import Navbar from "./navbar";
 import Footer from './Footer';
+import { Link } from "react-router-dom";
 import loginImg from "../assets/loginImg.png";
 import "./signup.css";
 import google from "../assets/google.png";
 import facebook from "../assets/facebook.png";
 import or from "../assets/or.png"
+import show from "../assets/show.svg";
+import hide from "../assets/hide.svg";
 
 const Signup = () => {
   const [username, setUsername] = useState('');
@@ -13,28 +16,36 @@ const Signup = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [errors, setErrors] = useState({});
+  const [isError,setIsError]= useState(false);
+  const [isVisible,setIsVisible]=useState(false);
 
   const validateForm = () => {
     const errors = {};
 
     if (!username.trim()) {
-      errors.username = 'Username is required';
+      errors.username = '*Username is required';
+      setIsError(true);
     }
 
     if (!email.trim()) {
-      errors.email = 'Email is required';
+      errors.email = '*Email is required';
+      setIsError(true);
     } else if (!/\S+@\S+\.\S+/.test(email)) {
-      errors.email = 'Email is invalid';
+      errors.email = '*Email is invalid';
+      setIsError(true);
     }
 
     if (!password.trim()) {
-      errors.password = 'Password is required';
+      errors.password = '*Password is required';
+      setIsError(true);
     } else if (password.length < 6) {
-      errors.password = 'Password must be at least 6 characters long';
+      errors.password = '*Password must be at least 6 characters long';
+      setIsError(true);
     }
 
     if (confirmPassword !== password) {
-      errors.confirmPassword = 'Passwords do not match';
+      errors.confirmPassword = '*Passwords do not match';
+      setIsError(true);
     }
 
     setErrors(errors);
@@ -46,6 +57,9 @@ const Signup = () => {
     if (validateForm()) {
       console.log('Form submitted');
     }
+  };
+  const togglePasswordVisibility = () => {
+    setIsVisible(!isVisible);
   };
 
   return (
@@ -125,29 +139,52 @@ const Signup = () => {
         
         <div className="input-label">Password</div>
         <input 
-          type="password" 
+          type={isVisible?"text":"password"}
           className="password" 
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           onBlur={validateForm}
         />
+        <img src={isVisible? show : hide } className="password-toggle" onClick={togglePasswordVisibility} />
         {errors.password && <span className="error">{errors.password}</span>}
         <div className="input-label">Confirm Password</div>
         <input 
-          type="password" 
-          className="password" 
+          type={isVisible?"text":"password"}
+          className="password "
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
           onBlur={validateForm}
         />
+        <img src={isVisible? show : hide } className="password-toggle" onClick={togglePasswordVisibility} />
         {errors.confirmPassword && <span className="error">{errors.confirmPassword}</span>}
-        <button type='button' className="SignUpbutton">
-          Login 
+        <button type='button' className={isError?"SignUpbuttonrevised":"SignUpbutton"}>
+          Sign Up
         </button>
-
         </div>
-        
-
+        <div className="loginSignUp">
+          <h1>Already have an account?</h1>
+          <p>Pick up where you left off.</p>
+          <Link
+            to="/login"
+            style={{
+              marginTop: "40px",
+              backgroundColor: "#FFECD1",
+              border: "none",
+              borderRadius: "10.1px",
+              height: "60px",
+              width: "200px",
+              color: "#083D32",
+              fontSize: "15px",
+              fontWeight: "500",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              textDecoration: "none",
+            }}
+          >
+            Log In
+          </Link>
+        </div>
       </div>
       <Footer/>
     </div>

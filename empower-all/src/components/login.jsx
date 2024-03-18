@@ -8,7 +8,8 @@ import Footer from "./Footer";
 import google from "../assets/google.png";
 import facebook from "../assets/facebook.png";
 import or from "../assets/or.png";
-import eyeIcon from "../assets/eye-open.png"; // Import the eye icon for password visibility toggle
+import show from "../assets/show.svg";
+import hide from "../assets/hide.svg";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -79,7 +80,7 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
               onBlur={validateForm}
             />
-            <i class={isVisible?"fa-regular fa-eye":"fa-solid fa-eye"} onClick={togglePasswordVisibility}></i>
+            <img src={isVisible? show : hide } className="password-toggle" onClick={togglePasswordVisibility} />
           </div>
           {errors.password && <span className="error" id="error">{errors.password}</span>}
           <button type="button" className={setErrorOccured ? "loginbuttonrevised" : "loginbutton"} onClick={handleSubmit}>

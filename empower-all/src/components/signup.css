@@ -100,7 +100,7 @@ body {
     position: relative;
     top: 100px;
     left: 16%;
-    margin-bottom: 273px;
+    margin-bottom: 173px;
     padding: 5px 0 0 5px;
     display: flex;
     flex-direction: column;
@@ -136,14 +136,14 @@ body {
     margin-left: -5px;
     margin-top: 15px
   }
-  .username
+  /* .username
 {
   width: 460px !important;
 }
 .password
 {
   width: 460px !important;
-}
+} */
 .SignUpbutton{
   position: relative;
   width: 460px;
@@ -154,4 +154,46 @@ body {
   border: none;
   background-color: #083D32;
   color: white;
+}
+.SignUpbuttonrevised{
+  position: relative;
+  width: 460px;
+  text-align: center;
+  margin-top: 10px;
+  height: 50px;
+  border-radius: 10.1px;
+  border: none;
+  background-color: #083D32;
+  color: white;
+}
+
+.loginSignUp{
+  text-wrap: wrap;
+  margin-left: 68%;
+  margin-top: -52%;
+  color: #FFECD1;
+}
+.loginSignUp h1{
+  margin-left: -6%;
+}
+.loginSignUp p{
+  text-wrap: wrap;
+  margin-top: 0%;
+  color: #fff ;
+}
+
+.error{
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: red;
+}
+
+
+.signUpLoginButton{
+  height: 60px;
+  width: 200px;
+  border-radius: 10.1px;
+  border: none;
+  background-color: #FFECD1;
+  margin-top: 40px;
 }
