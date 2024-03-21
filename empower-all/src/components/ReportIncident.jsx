@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './navbar';
 import './report.css';
 import Footer from './Footer';
 import holder from '../assets/Group 37.png';
 
 const ReportIncident = () => {
+  const [selectedFile, setSelectedFile] = useState(null);
+
+  const handleFileChange = (event) => {
+    setSelectedFile(event.target.files[0]);
+  };
+
+  const handleSubmit = () => {
+    // Handle the file upload logic here
+    console.log('Selected File:', selectedFile);
+    // You can send the selected file to your backend or perform any other actions
+  };
+
   return (
     <div className='reportIncident'>
       <Navbar />
@@ -38,13 +50,20 @@ const ReportIncident = () => {
         <br/>
         <label className='fieldLabel'>Upload Photos</label>
         <br/>
-        <img src={holder} alt='Uploaded' className='inputField' id='upload' />
+        {/* Use input type file for uploading photos */}
+        <input
+          type='file'
+          className='inputField'
+          id='upload'
+          accept='image/*'
+          onChange={handleFileChange}
+        />
         <br/>
-        <button type='button' className='reportSubmit'>Submit</button>
+        <button type='button' className='reportSubmit' onClick={handleSubmit}>Submit</button>
       </div>
       <Footer />
     </div>
   );
 };
 
-export default ReportIncident;
+export default ReportIncident;
